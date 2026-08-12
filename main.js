@@ -99,6 +99,27 @@
     }, { passive: true });
   }
 
+  /* Demo videos: only play while their card is on screen */
+  var demoVideos = doc.querySelectorAll(".demo-video");
+  if (demoVideos.length) {
+    if (!reduce && "IntersectionObserver" in window) {
+      var vio = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.play().catch(function () {});
+            } else {
+              e.target.pause();
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+      demoVideos.forEach(function (v) { vio.observe(v); });
+    }
+    // If motion is reduced, videos stay paused on their poster frame.
+  }
+
   /* Close other FAQ items when one opens (accordion behavior) */
   var faqItems = doc.querySelectorAll(".faq-list details");
   faqItems.forEach(function (d) {

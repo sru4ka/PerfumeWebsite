@@ -306,6 +306,19 @@ section[id], #top { scroll-margin-top: 84px; }
 .deal-total strong { color: var(--accent-deep); }
 
 /* ---------- AI band ---------- */
+/* ---------- Demo ---------- */
+.demo { max-width: var(--maxw); margin: 0 auto; padding: 20px 24px 70px; }
+.demo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.demo-card { text-align: center; }
+.demo-frame {
+  position: relative; aspect-ratio: 620 / 1280; max-width: 220px; margin: 0 auto 22px;
+  border-radius: 22px; overflow: hidden; background: #17161A;
+  box-shadow: var(--shadow-md); border: 1px solid var(--hairline);
+}
+.demo-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.demo-card h3 { font-family: var(--serif); font-size: 19px; font-weight: 500; margin-bottom: 8px; }
+.demo-card p { font-size: 14.5px; color: var(--text-2); max-width: 280px; margin: 0 auto; }
+
 .ai-band { background: var(--text); color: #F2EFEA; margin: 70px 0; padding: 84px 24px; }
 .ai-inner { max-width: var(--maxw); margin: 0 auto; text-align: center; }
 .ai-inner h2 { font-size: clamp(28px, 4vw, 42px); color: #fff; margin-bottom: 46px; font-weight: 400; }
@@ -432,6 +445,7 @@ section[id], #top { scroll-margin-top: 84px; }
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: flex; }
   .nav-mobile { display: flex; }
+  .demo-grid { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; gap: 44px; }
   .hero { grid-template-columns: 1fr; padding-top: 120px; text-align: center; }
   .hero-copy { order: 1; }
   .hero-phone { order: 2; margin-top: 20px; }
