@@ -1,6 +1,6 @@
-# Scented — Marketing Website
+# Perfumedia — Marketing Website
 
-The landing page for **Scented**, the fragrance wardrobe app. *Your fragrance wardrobe, in your pocket.*
+The landing page for **Perfumedia**, the fragrance wardrobe app. *Your fragrance wardrobe, in your pocket.*
 
 Built as a fast, dependency-free static site (plain HTML/CSS/JS). It mirrors the app's
 design language — marble/off-white surfaces, a single gold accent (`#C9A227`), and
