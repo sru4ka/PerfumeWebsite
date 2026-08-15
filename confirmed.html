@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Email verified — Perfumedia</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      background: #FAF7F2; color: #181510;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      text-align: center; padding: 24px;
+    }
+    .card { max-width: 420px; }
+    .mark { font-size: 56px; line-height: 1; }
+    h1 { font-size: 28px; margin: 18px 0 8px; letter-spacing: .3px; }
+    p { color: #6b6357; font-size: 16px; line-height: 1.5; margin: 0; }
+    .open {
+      display: block; margin: 26px auto 0; max-width: 300px;
+      background: #C99B2F; color: #181510; text-decoration: none;
+      font-size: 17px; font-weight: 600; letter-spacing: .2px;
+      padding: 15px 28px; border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(166, 121, 28, .25);
+    }
+    .open:active { opacity: .8; }
+    .hint { margin-top: 14px; font-size: 13px; color: #8a8172; }
+    .brand { margin-top: 28px; font-size: 12px; letter-spacing: 2.5px; color: #A6791C; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="mark">✅</div>
+    <h1>Email verified successfully</h1>
+    <p>Your account is ready. Open Perfumedia and sign in.</p>
+    <a class="open" href="scented://confirmed">Open Perfumedia and sign in</a>
+    <p class="hint">Nothing happening? Open the Perfumedia app on your phone and sign in with your email.</p>
+    <div class="brand">Perfumedia</div>
+  </div>
+  <script>
+    // Hand off into the app's own "verified" screen. The tap on the button is
+    // the reliable path; this auto-attempt just saves the tap when the app is
+    // installed. Safari ignores it quietly when it is not.
+    setTimeout(function () { window.location.href = 'scented://confirmed'; }, 450);
+  </script>
+</body>
+</html>

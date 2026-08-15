@@ -1,4 +1,4 @@
-/* SCENTED — landing interactions. Progressive enhancement, no dependencies. */
+/* PERFUMEDIA — landing interactions. Progressive enhancement, no dependencies. */
 (function () {
   "use strict";
 
