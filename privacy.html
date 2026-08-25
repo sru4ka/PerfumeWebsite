@@ -7,8 +7,8 @@
   <meta name="description" content="How Perfumedia collects, uses, and protects your data." />
   <meta name="theme-color" content="#FAF7F2" />
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="favicon-512.png" sizes="512x512" type="image/png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -106,17 +106,18 @@
       main { padding: 40px 20px 80px; }
       table { font-size: 14px; }
     }
-  </style>
+  
+  .mark { display: block; height: 26px; width: auto; }
+</style>
 </head>
 <body>
   <header class="top">
     <div class="top-inner">
       <a class="brand" href="index.html" aria-label="Perfumedia home">
-        <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-          <path d="M50,18 L80,82 L20,82 Z" stroke="#C9A227" stroke-width="6" stroke-linejoin="round"/>
-          <path d="M36.9,46 L63.1,46" stroke="#C9A227" stroke-width="6"/>
-          <path d="M28.4,64 L71.6,64" stroke="#C9A227" stroke-width="6"/>
-        </svg>
+        <picture>
+          <source srcset="assets/logo/mark-dark.png" media="(prefers-color-scheme: dark)" />
+          <img class="mark" src="assets/logo/mark.png" alt="" width="14" height="26" />
+        </picture>
         <span>PERFUMEDIA</span>
       </a>
       <a class="back" href="index.html">← Back to site</a>

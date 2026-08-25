@@ -7,8 +7,8 @@
   <meta name="description" content="What Perfumedia's tiers include, and how it compares with Parfumo, Fragram and Perfumist on the three questions every fragrance collector actually asks." />
   <meta name="theme-color" content="#FAF7F2" />
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="favicon-512.png" sizes="512x512" type="image/png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <meta property="og:title" content="Perfumedia vs Parfumo, Fragram &amp; Perfumist" />
@@ -241,6 +241,8 @@
   @media (prefers-reduced-motion: reduce) {
     * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
   }
+
+  .mark { display: block; height: 24px; width: auto; }
 </style><style>
   .sitebar {
     position: sticky; top: 0; z-index: 30;
@@ -286,11 +288,10 @@
 <div class="sitebar">
   <div class="sitebar-in">
     <a class="home" href="index.html">
-      <svg width="24" height="24" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-        <path d="M50,18 L80,82 L20,82 Z" stroke="#C9A227" stroke-width="6" stroke-linejoin="round"/>
-        <path d="M36.9,46 L63.1,46" stroke="#C9A227" stroke-width="6"/>
-        <path d="M28.4,64 L71.6,64" stroke="#C9A227" stroke-width="6"/>
-      </svg>
+      <picture>
+        <source srcset="assets/logo/mark-dark.png" media="(prefers-color-scheme: dark)" />
+        <img class="mark" src="assets/logo/mark.png" alt="" width="13" height="24" />
+      </picture>
       <span>PERFUMEDIA</span>
     </a>
     <a class="back" href="index.html">&larr; Back to site</a>
