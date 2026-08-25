@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfumedia vs Parfumo, Fragram &amp; Perfumist &mdash; an honest comparison</title>
+  <meta name="description" content="What Perfumedia's tiers include, and how it compares with Parfumo, Fragram and Perfumist on the three questions every fragrance collector actually asks." />
+  <meta name="theme-color" content="#FAF7F2" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <meta property="og:title" content="Perfumedia vs Parfumo, Fragram &amp; Perfumist" />
+  <meta property="og:description" content="An honest capability comparison, plus what every tier includes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://perfumediapp.com/compare.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --paper:      #FAF7F2;
+    --surface:    #FFFFFF;
+    --surface-2:  #F5F1E9;
+    --ink:        #1C1B1F;
+    --ink-2:      #7C766D;
+    --ink-3:      #A39C91;
+    --gold:       #C9A227;
+    --gold-deep:  #A9861A;
+    --gold-soft:  #F8F2DF;
+    --hairline:   #E7E1D6;
+    --good:       #5E7D5A;
+    --shadow:     0 20px 50px -28px rgba(28,27,31,.28);
+    --shadow-lg:  0 34px 70px -30px rgba(28,27,31,.34);
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #17161A;
+      --surface:   #211F26;
+      --surface-2: #2A2730;
+      --ink:       #F2EFEA;
+      --ink-2:     #A9A4B0;
+      --ink-3:     #79747F;
+      --gold:      #D9B23A;
+      --gold-deep: #E4C463;
+      --gold-soft: #2E2A20;
+      --hairline:  #322F39;
+      --good:      #86A681;
+      --shadow:    0 20px 50px -28px rgba(0,0,0,.6);
+      --shadow-lg: 0 34px 70px -30px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:     #17161A;
+    --surface:   #211F26;
+    --surface-2: #2A2730;
+    --ink:       #F2EFEA;
+    --ink-2:     #A9A4B0;
+    --ink-3:     #79747F;
+    --gold:      #D9B23A;
+    --gold-deep: #E4C463;
+    --gold-soft: #2E2A20;
+    --hairline:  #322F39;
+    --good:      #86A681;
+    --shadow:    0 20px 50px -28px rgba(0,0,0,.6);
+    --shadow-lg: 0 34px 70px -30px rgba(0,0,0,.7);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    padding: 64px 24px 110px;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; display: flex; flex-direction: column; gap: 76px; }
+
+  /* ---------- masthead ---------- */
+  .mast { display: flex; flex-direction: column; gap: 20px; max-width: 860px; }
+  .brandline { display: flex; align-items: center; gap: 11px; }
+  .brandline span {
+    font-family: var(--serif); font-weight: 600; font-size: 15px;
+    letter-spacing: .26em; color: var(--ink);
+  }
+  h1 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(38px, 6vw, 62px); line-height: 1.04;
+    letter-spacing: -.02em; text-wrap: balance; max-width: 13ch;
+  }
+  h1 em { font-style: italic; color: var(--gold-deep); }
+  .standfirst { color: var(--ink-2); font-size: 18px; max-width: 56ch; }
+
+  /* ---------- section furniture ---------- */
+  section { display: flex; flex-direction: column; gap: 26px; }
+  .eyebrow {
+    font-size: 11.5px; font-weight: 600; letter-spacing: .2em;
+    text-transform: uppercase; color: var(--gold-deep);
+    display: flex; align-items: center; gap: 12px;
+  }
+  .eyebrow::after {
+    content: ""; flex: 1; height: 1px; background: var(--hairline);
+  }
+  h2 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(26px, 3.6vw, 38px); line-height: 1.12;
+    letter-spacing: -.015em; text-wrap: balance; max-width: 24ch;
+  }
+  .lede { color: var(--ink-2); font-size: 16.5px; max-width: 62ch; }
+
+  /* ---------- tiers ---------- */
+  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+  .tier {
+    background: var(--surface); border: 1px solid var(--hairline);
+    border-radius: 20px; padding: 30px 26px 28px;
+    display: flex; flex-direction: column; gap: 18px;
+    box-shadow: var(--shadow);
+  }
+  .tier.hero {
+    border-color: var(--gold);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+  }
+  .flag {
+    position: absolute; top: -12px; left: 26px;
+    background: var(--gold); color: #17161A;
+    font-size: 11px; font-weight: 700; letter-spacing: .07em;
+    padding: 5px 13px; border-radius: 999px; text-transform: uppercase;
+  }
+  .tier h3 {
+    font-family: var(--serif); font-weight: 500; font-size: 22px; letter-spacing: -.01em;
+  }
+  .price { display: flex; align-items: baseline; gap: 7px; font-variant-numeric: tabular-nums; }
+  .price .amt { font-family: var(--serif); font-weight: 500; font-size: 40px; letter-spacing: -.02em; }
+  .price .per { color: var(--ink-2); font-size: 14.5px; }
+  .tier .note { color: var(--ink-2); font-size: 14px; margin-top: -8px; }
+  .tier ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .tier li {
+    position: relative; padding-left: 24px; font-size: 15px; color: var(--ink);
+  }
+  .tier li::before {
+    content: ""; position: absolute; left: 4px; top: .62em;
+    width: 7px; height: 7px; border-radius: 50%; background: var(--gold);
+  }
+  .tier.free li::before { background: var(--ink-3); }
+  .tier .foot {
+    margin-top: auto; padding-top: 6px; font-size: 13px; color: var(--ink-3);
+  }
+
+  /* ---------- matrix ---------- */
+  .scroller { overflow-x: auto; border: 1px solid var(--hairline); border-radius: 18px; background: var(--surface); }
+  table { width: 100%; border-collapse: collapse; min-width: 660px; }
+  thead th {
+    text-align: center; padding: 18px 12px 14px;
+    font-size: 12.5px; font-weight: 600; letter-spacing: .04em;
+    color: var(--ink-2); border-bottom: 1px solid var(--hairline);
+    vertical-align: bottom;
+  }
+  thead th:first-child { text-align: left; padding-left: 22px; width: 34%; }
+  thead th.us { color: var(--ink); }
+  thead th .sub { display:block; font-size:12px; font-weight:500; color: var(--ink-3); letter-spacing:0; }
+  thead th.us .tag {
+    display: block; font-family: var(--serif); font-size: 16px;
+    font-weight: 500; letter-spacing: 0; color: var(--gold-deep);
+  }
+  tbody td {
+    padding: 13px 12px; text-align: center; font-size: 14px;
+    border-bottom: 1px solid var(--hairline); color: var(--ink-2);
+    font-variant-numeric: tabular-nums;
+  }
+  tbody td:first-child {
+    text-align: left; padding-left: 22px; color: var(--ink); font-weight: 500;
+  }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.us { background: var(--gold-soft); color: var(--ink); font-weight: 600; }
+  tr.band td {
+    background: var(--surface-2); color: var(--ink);
+    font-family: var(--serif); font-size: 16px; font-weight: 500;
+    letter-spacing: -.005em; padding: 14px 12px 13px 22px; text-align: left;
+  }
+  tr.band td.us { background: var(--surface-2); }
+  .dot { font-size: 15px; line-height: 1; }
+  .dot.full { color: var(--good); }
+  .dot.half { color: var(--gold-deep); }
+  .dot.none { color: var(--ink-3); }
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 20px; font-size: 13.5px; color: var(--ink-2);
+  }
+  .legend b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- only-us ---------- */
+  .onlys { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .only {
+    background: var(--surface); border: 1px solid var(--hairline);
+    border-radius: 18px; padding: 24px 24px 22px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .only h4 {
+    font-family: var(--serif); font-weight: 500; font-size: 19px; letter-spacing: -.01em;
+  }
+  .only p { color: var(--ink-2); font-size: 15px; }
+
+  /* ---------- honest ---------- */
+  .honest {
+    background: var(--surface-2); border: 1px solid var(--hairline);
+    border-left: 3px solid var(--gold); border-radius: 16px;
+    padding: 26px 28px; display: flex; flex-direction: column; gap: 12px;
+  }
+  .honest h3 { font-family: var(--serif); font-weight: 500; font-size: 20px; }
+  .honest p { color: var(--ink-2); font-size: 15.5px; max-width: 68ch; }
+  .honest strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- pull ---------- */
+  .pull {
+    font-family: var(--serif); font-weight: 400; font-style: italic;
+    font-size: clamp(22px, 3.2vw, 31px); line-height: 1.3;
+    letter-spacing: -.015em; max-width: 30ch; color: var(--ink);
+    padding-left: 22px; border-left: 2px solid var(--gold);
+    text-wrap: balance;
+  }
+  .pull span { color: var(--gold-deep); }
+
+  footer {
+    border-top: 1px solid var(--hairline); padding-top: 22px;
+    font-size: 13px; color: var(--ink-3);
+    display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+  }
+
+  @media (max-width: 860px) {
+    .tiers { grid-template-columns: 1fr; }
+    .onlys { grid-template-columns: 1fr; }
+    .tier.hero { order: -1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+  }
+</style><style>
+  .sitebar {
+    position: sticky; top: 0; z-index: 30;
+    background: rgba(250,247,242,.9);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--hairline);
+    margin: -64px -24px 0; padding: 14px 24px;
+  }
+  :root[data-theme="dark"] .sitebar { background: rgba(23,22,26,.9); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .sitebar { background: rgba(23,22,26,.9); }
+  }
+  .sitebar-in {
+    max-width: 1060px; margin: 0 auto; display: flex; align-items: center; gap: 12px;
+  }
+  .sitebar a { text-decoration: none; color: var(--ink); }
+  .sitebar .home { display: flex; align-items: center; gap: 10px; }
+  .sitebar .home span {
+    font-family: var(--serif); font-weight: 600; font-size: 15px; letter-spacing: .24em;
+  }
+  .sitebar .back { margin-left: auto; font-size: 14.5px; color: var(--ink-2); font-family: var(--sans); }
+  .sitebar .back:hover { color: var(--ink); }
+  .endcta {
+    background: var(--surface); border: 1px solid var(--gold); border-radius: 22px;
+    padding: 40px 32px; text-align: center; display: flex; flex-direction: column;
+    gap: 14px; align-items: center; box-shadow: var(--shadow-lg);
+  }
+  .endcta h2 { max-width: 22ch; }
+  .endcta p { color: var(--ink-2); font-size: 16.5px; max-width: 52ch; }
+  .endcta .row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 6px; }
+  .endcta a {
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 999px; font-weight: 600; font-size: 15.5px; padding: 14px 28px;
+    text-decoration: none; font-family: var(--sans);
+  }
+  .endcta .solid { background: var(--ink); color: var(--paper); }
+  .endcta .ghost { border: 1px solid var(--hairline); color: var(--ink); }
+  .endcta .ghost:hover { border-color: var(--gold); color: var(--gold-deep); }
+</style>
+</head>
+<body>
+<div class="sitebar">
+  <div class="sitebar-in">
+    <a class="home" href="index.html">
+      <svg width="24" height="24" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <path d="M50,18 L80,82 L20,82 Z" stroke="#C9A227" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M36.9,46 L63.1,46" stroke="#C9A227" stroke-width="6"/>
+        <path d="M28.4,64 L71.6,64" stroke="#C9A227" stroke-width="6"/>
+      </svg>
+      <span>PERFUMEDIA</span>
+    </a>
+    <a class="back" href="index.html">&larr; Back to site</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="mast">
+    <h1>Everyone else built an encyclopedia. We built a <em>decision engine.</em></h1>
+    <p class="standfirst">What the tiers are, and the honest case for why this app wins against Parfumo, Fragram, and the rest.</p>
+  </header>
+
+  <!-- ============ TIERS ============ -->
+  <section>
+    <p class="eyebrow">The tiers</p>
+    <h2>Free to browse. Membership to master it.</h2>
+    <p class="lede">The free tier is not a crippled demo &#8212; it is the funnel. Browsing and deals stay open because every retailer tap earns affiliate revenue, and the personality quiz stays open because it is the growth loop. Membership sells the answers.</p>
+
+    <div class="tiers">
+      <div class="tier free">
+        <h3>Free</h3>
+        <div class="price"><span class="amt">$0</span><span class="per">forever</span></div>
+        <p class="note">Browse, compare, find your type.</p>
+        <ul>
+          <li>Full 50,000-fragrance database</li>
+          <li>Live prices and deals</li>
+          <li>Perfume Personality quiz</li>
+          <li>Read every review and vote</li>
+          <li>Shelf up to 10 bottles</li>
+          <li>2 bottle scans per week</li>
+        </ul>
+        <p class="foot">No account required to browse.</p>
+      </div>
+
+      <div class="tier hero">
+        <span class="flag">Best value &#183; save 58%</span>
+        <h3>Yearly</h3>
+        <div class="price"><span class="amt">$39.99</span><span class="per">/ year</span></div>
+        <p class="note">$3.33 a month, billed annually.</p>
+        <ul>
+          <li>Daily pick: what to wear today</li>
+          <li>Your matches and recommendations</li>
+          <li>Unlimited scans, Ask and shelf</li>
+          <li>Price-drop alerts and history</li>
+          <li>Post reviews, vote, follow</li>
+          <li>Export your collection</li>
+        </ul>
+        <p class="foot">7-day free trial. Cancel anytime.</p>
+      </div>
+
+      <div class="tier">
+        <h3>Monthly</h3>
+        <div class="price"><span class="amt">$7.99</span><span class="per">/ month</span></div>
+        <p class="note">The same membership, month to month.</p>
+        <ul>
+          <li>Everything in membership</li>
+          <li>No commitment, cancel anytime</li>
+        </ul>
+        <p class="foot">Billed from day one. The free trial is on the yearly plan.</p>
+      </div>
+    </div>
+  </section>
+
+  <p class="pull">Membership is not a paywall on a database. It is <span>the price of an answer.</span></p>
+
+  <!-- ============ MATRIX ============ -->
+  <section>
+    <p class="eyebrow">The competition</p>
+    <h2>Three questions every collector asks</h2>
+    <p class="lede">Fragrance apps are usually compared on catalogue size, which flatters the oldest ones. Compared instead on the three things an owner actually needs answered, the field separates sharply &#8212; and the separation is not where you would expect.</p>
+
+    <div class="scroller">
+      <table>
+        <thead>
+          <tr>
+            <th>Capability</th>
+            <th class="us">Perfumedia<span class="tag">$7.99</span></th>
+            <th>Parfumo<span class="sub">Free</span></th>
+            <th>Fragram<span class="sub">$7.99&#8211;49.99</span></th>
+            <th>Perfumist<span class="sub">Free</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="band"><td colspan="5">&#8220;What is this fragrance?&#8221;</td></tr>
+          <tr>
+            <td>Catalogue size</td>
+            <td class="us">50,000</td>
+            <td>231,000</td>
+            <td>undisclosed</td>
+            <td>50,000</td>
+          </tr>
+          <tr>
+            <td>Note pyramid with confidence score</td>
+            <td class="us"><span class="dot full">&#9679;</span></td>
+            <td><span class="dot half">&#9680;</span></td>
+            <td><span class="dot half">&#9680;</span></td>
+            <td><span class="dot half">&#9680;</span></td>
+          </tr>
+          <tr>
+            <td>Scan a bottle to identify it</td>
+            <td class="us"><span class="dot full">&#9679;</span></td>
+            <td><span class="dot full">&#9679;</span></td>
+            <td><span class="dot full">&#9679;</span></td>
+            <td><span class="dot half">&#9680;</span></td>
+          </tr>
+
+          <tr class="band"><td colspan="5">&#8220;What do I wear today?&#8221;</td></tr>
+          <tr>
+            <td>Daily pick from bottles you own</td>
+            <td class="us"><span class="dot full">&#9679;</span></td>
+            <td><span class="dot half">&#9680;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+          </tr>
+          <tr>
+            <td>Weather-aware recommendation</td>
+            <td class="us"><span class="dot full">&#9679;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+          </tr>
+          <tr>
+            <td>Named taste identity</td>
+            <td class="us"><span class="dot full">&#9679;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+            <td><span class="dot half">&#9680;</span></td>
+            <td><span class="dot half">&#9680;</span></td>
+          </tr>
+          <tr>
+            <td>Collection and wear history</td>
+            <td class="us"><span class="dot full">&#9679;</span></td>
+            <td><span class="dot full">&#9679;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+            <td><span class="dot half">&#9680;</span></td>
+          </tr>
+
+          <tr class="band"><td colspan="5">&#8220;Where do I buy it cheapest?&#8221;</td></tr>
+          <tr>
+            <td>Live prices, compared side by side</td>
+            <td class="us"><span class="dot full">&#9679;</span></td>
+            <td><span class="dot half">&#9680;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+            <td><span class="dot half">&#9680;</span></td>
+          </tr>
+          <tr>
+            <td>Per-millilitre value</td>
+            <td class="us"><span class="dot full">&#9679;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+          </tr>
+          <tr>
+            <td>Price-drop alerts on your wishlist</td>
+            <td class="us"><span class="dot full">&#9679;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+          </tr>
+          <tr>
+            <td>Counterfeit-risk listings filtered out</td>
+            <td class="us"><span class="dot full">&#9679;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+            <td><span class="dot none">&#9675;</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="legend">
+      <span><span class="dot full">&#9679;</span> &nbsp;<b>Does it well</b></span>
+      <span><span class="dot half">&#9680;</span> &nbsp;<b>Partial or poorly executed</b></span>
+      <span><span class="dot none">&#9675;</span> &nbsp;<b>Does not do it</b></span>
+    </div>
+  </section>
+
+  <!-- ============ ONLY US ============ -->
+  <section>
+    <p class="eyebrow">What nobody else does</p>
+    <h2>Four things that exist in exactly one fragrance app</h2>
+
+    <div class="onlys">
+      <div class="only">
+        <h4>A pick that reads the weather</h4>
+        <p>One recommendation each morning, drawn only from bottles you own, tuned to the day's conditions and your scent profile &#8212; and it shows its reasoning instead of asking for trust.</p>
+      </div>
+      <div class="only">
+        <h4>Real price intelligence</h4>
+        <p>Retail struck through against live listings, per-millilitre value so sizes compare honestly, drop alerts on your wishlist, and suspicious listings filtered before you ever see them.</p>
+      </div>
+      <div class="only">
+        <h4>Twelve Perfume Personalities</h4>
+        <p>A named identity, not a preference slider &#8212; The Sovereign, The Alchemist, The Muse. Free to take, shareable, and the only quiz in the category built to travel beyond the app.</p>
+      </div>
+      <div class="only">
+        <h4>A community you have to join</h4>
+        <p>Reading is free; posting requires membership. Every review, vote and rating comes from someone who paid to be there, which is the one thing a free app structurally cannot offer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HONEST ============ -->
+  <section>
+    <p class="eyebrow">The honest read</p>
+    <h2>Where the others are genuinely ahead</h2>
+
+    <div class="honest">
+      <h3>Parfumo owns depth and time</h3>
+      <p><strong>231,000 fragrances against our 50,000</strong>, plus roughly two decades of accumulated community reviews. That gap is real and it will not close by launch. It is also why the argument is never &#8220;our database is better&#8221; &#8212; it is that a bigger encyclopedia does not tell you what to wear on Thursday or stop you overpaying by ninety dollars.</p>
+    </div>
+
+    <div class="honest">
+      <h3>Fragram proved the price point</h3>
+      <p>A scan-and-recommend app with a hard paywall at <strong>$7.99 to $49.99</strong>, sitting at 4.7 stars across 1.8K US ratings. It validates that this audience pays for AI utility &#8212; and it has no collection, no community, and no price comparison to defend. That is the shape of the opening.</p>
+    </div>
+
+    <div class="honest">
+      <h3>Free is the market's default</h3>
+      <p>Parfumo, Perfumist and Fragrantica are all free, so the free tier has to be genuinely good or the paid tier never gets a hearing. That is exactly why browsing, live deals and the quiz sit outside the paywall: they are the argument, not the product.</p>
+    </div>
+  </section>
+
+  <p class="pull">Parfumo tells you about a perfume. <span>Perfumedia tells you what to wear today, and where to buy your next bottle for less.</span></p>
+
+
+  <section class="endcta">
+    <h2>See it for yourself</h2>
+    <p>Browsing the catalogue, live prices and the Perfume Personality quiz are free. No account needed to look around.</p>
+    <div class="row">
+      <a class="solid" href="index.html#get">Get the app</a>
+      <a class="ghost" href="quiz.html">Take the quiz</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>&#169; <span id="yr">2026</span> Perfumedia &#183; <a href="index.html" style="color:var(--gold-deep);text-decoration:none">perfumediapp.com</a></span>
+    <span>Competitor figures from US App Store listings</span>
+  </footer>
+
+</div>
+
+<script>
+  var y = document.getElementById('yr');
+  if (y) { y.textContent = String(new Date().getFullYear()); }
+</script>
+
+</body>
+</html>
